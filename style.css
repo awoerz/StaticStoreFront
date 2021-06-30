@@ -1,0 +1,147 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myTeal: #4df8f8;
+    --myBlue: #4d83f8;
+    --myPurple: #a435d8;
+}
+
+/*diamonds background*/
+.diamond-backdrop {
+    position: fixed;
+    background-color: var(--myTeal);
+    height: 160%;
+    width: 100%;
+}
+
+.diamond {
+    display: block;
+    position: absolute;
+    height: 150px;;
+    width: 150px;
+    transform: rotate(45deg);
+    background-color: var(--myBlue);
+    z-index: 0;
+}
+
+#diamond-one {
+    left: 5%;
+    top: 5%;
+}
+
+#diamond-two {
+    height: 300px;
+    width: 300px;
+    left: 30%;
+    top:60%;
+}
+
+#diamond-three {
+    height: 220px;
+    width: 220px;
+    left: 75%;
+    top: 180px;
+}
+
+/*Nav / Header Section*/
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255,255,255, .3);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(.2em);
+    padding: 10px 20px;
+}
+
+.logo-div {
+    position: relatvie;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.logo-div a {
+    text-decoration: none;
+}
+
+.logo-div h1 {
+    color: var(--myPurple);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    margin: 5px;
+    background-color: var(--myTeal);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--myPurple);
+    padding: .5em;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--myPurple);
+    color: var(--myTeal);
+}
+
+/*Slider Section*/
+.slider-section {
+    position: relative;
+    height: 110%;
+    width: 100%;
+    background-color: rgba(255, 192, 203, 0.425);
+    backdrop-filter: blur(.3em);
+}
+
+.viewport {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 710px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative;
+    width: 2130px;
+    font-size: 0px;
+    animation-name: carouselMotion;
+    /*Change animation-duration to larger number to make animations   longer*/
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 710px;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes carouselMotion {
+    0%  {left: 0;}
+    25% {left: 0;}
+    30% {left: -710px;}
+    55% {left: -710px;}
+    60% {left: -1420px;}
+    85% {left: -1420px;}
+    100%  {left: 0;}
+}
