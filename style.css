@@ -5,14 +5,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --myTeal: #00cfc8;
+  --myTeal: #00cfc8ad;
   --myBlue: #4d83f8;
   --myPurple: #cc65fc44;
   --img-width: 880px;
-  --glassBackground: rgba(255, 255, 255, 0.3);
+  --glassBackground: rgba(255, 255, 255, 0.288);
   --glassShadow: rgba(0, 0, 0, 0.3);
   --animation-duration: 20s;
+  --myLightgray: rgb(194, 193, 193);
+  --myGray: rgb(122, 122, 122);
 }
 
 .glass {
@@ -40,42 +46,39 @@
   color: white;
 }
 
-/*diamonds background*/
-.diamond-backdrop {
+/*Image background*/
+.image-backdrop {
   position: fixed;
-  background-image: url('img/Elegant_Background-18.jpg');
+  background-image: url('img/checkerboard-cross.png');
+  background-size: cover;
   height: 160%;
   width: 100%;
   z-index: -1;
 }
 
-.diamond {
-  display: block;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  transform: rotate(45deg);
-  background-color: var(--myBlue);
-  z-index: 0;
+/*Return To Top Button*/
+.return-top-btn {
+  position: fixed;
+  background-color: var(--myTeal);
+  border-radius: 8px;
+  height: 60px;
+  width: 60px;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
 }
 
-#diamond-one {
-  left: 5%;
-  top: 5%;
+.return-top-btn:hover {
+  transform: scale(1.05);
 }
 
-#diamond-two {
-  height: 300px;
-  width: 300px;
-  left: 30%;
-  top: 60%;
-}
-
-#diamond-three {
-  height: 220px;
-  width: 220px;
-  left: 75%;
-  top: 180px;
+.arrow-up {
+  border-bottom: 20px solid white;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
 }
 
 /*Nav / Header Section*/
@@ -238,6 +241,50 @@ nav ul li svg {
   margin: 0;
 }
 
+.card-section {
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  height: 500px;
+  transition: all 0.35s ease;
+  margin: 50px 20px;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  padding: 10px;
+}
+
+.card h2 {
+  margin: 8px;
+}
+
+.card p {
+  font-weight: 700;
+  padding: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+/*Animations*/
+
 @keyframes carouselMotion {
   0% {
     left: 0;
@@ -300,6 +347,9 @@ nav ul li svg {
     opacity: 0%;
   }
   97% {
+    opacity: 0%;
+  }
+  100% {
     opacity: 0%;
   }
 }
