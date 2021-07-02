@@ -1,14 +1,14 @@
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poiret One', cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --myTeal: #4df8f8;
+  --myTeal: #00cfc8;
   --myBlue: #4d83f8;
-  --myPurple: #a435d8;
+  --myPurple: #cc65fc44;
   --img-width: 880px;
   --glassBackground: rgba(255, 255, 255, 0.3);
   --glassShadow: rgba(0, 0, 0, 0.3);
@@ -73,14 +73,26 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 1;
+  max-height: 70px;
 }
 
 .logo-div a {
   text-decoration: none;
 }
 
-.logo-div h1 {
-  color: var(--myPurple);
+.logo-div svg {
+  padding: 0;
+  margin: 0;
+  max-height: 70px;
+  max-width: 291px;
+  border-radius: 5px;
+  fill: var(--myTeal);
+  transition: all 0.25s ease;
+}
+
+.logo-div:hover svg {
+  fill: white;
+  background-color: var(--myTeal);
 }
 
 nav ul {
@@ -95,17 +107,26 @@ nav ul li {
 
 nav ul li a {
   margin: 5px;
-  background-color: var(--myTeal);
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
   text-decoration: none;
-  color: var(--myPurple);
+  color: var(--myTeal);
   padding: 0.5em;
   border-radius: 5px;
+  transition: all 0.25s ease;
 }
 
 nav ul li a:hover {
-  background-color: var(--myPurple);
+  background-color: var(--myTeal);
+  color: white;
+}
+
+nav ul li svg {
+  margin: 5px;
   color: var(--myTeal);
+  width: 25px;
+  height: 25px;
 }
 
 /*Slider Section*/
