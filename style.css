@@ -12,6 +12,7 @@
   --img-width: 880px;
   --glassBackground: rgba(255, 255, 255, 0.3);
   --glassShadow: rgba(0, 0, 0, 0.3);
+  --animation-duration: 20s;
 }
 
 .glass {
@@ -22,12 +23,30 @@
   box-shadow: 5px 5px 5px var(--glassShadow);
 }
 
+.btn {
+  font-size: 24px;
+  font-weight: 600;
+  height: fit-content;
+  padding: 0.3em;
+  background-color: transparent;
+  border: transparent;
+  border-radius: 5px;
+  color: var(--myTeal);
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background-color: var(--myTeal);
+  color: white;
+}
+
 /*diamonds background*/
 .diamond-backdrop {
   position: fixed;
   background-image: url('img/Elegant_Background-18.jpg');
   height: 160%;
   width: 100%;
+  z-index: -1;
 }
 
 .diamond {
@@ -122,33 +141,82 @@ nav ul li a:hover {
   color: white;
 }
 
+.svg-container {
+  font-size: 24px;
+  padding: 0.4em;
+  border-radius: 5px;
+}
+
 nav ul li svg {
   margin: 5px;
   color: var(--myTeal);
   width: 25px;
   height: 25px;
+  transition: all 0.5s ease;
+}
+
+.svg-container:hover {
+  background-color: var(--myTeal);
+}
+
+.svg-container:hover svg {
+  color: white;
+}
+
+/*Welcome Callout*/
+
+.welcome-callout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.text-wrap {
+  padding: 0.4em;
+  border-radius: 8px;
 }
 
 /*Slider Section*/
 .slider-section {
   position: relative;
-  height: 850px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .viewport-container {
-  padding: 50px;
+  padding: 20px;
   border-radius: 8px;
 }
 
 .viewport {
+  position: relative;
   overflow: hidden;
   margin: 0 auto;
   width: var(--img-width);
   overflow: hidden;
+}
+
+.slider-img-cta {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  background-image: linear-gradient(to top, #646464b2, #646464b2, transparent);
+  z-index: 5;
+  height: 80px;
+  width: 100%;
+  padding: 10px;
+  animation: fadeInText var(--animation-duration);
+  animation-iteration-count: infinite;
+}
+
+.slider-img-cta h2 {
+  max-width: 80%;
+  font-size: 20px;
+  color: white;
 }
 
 .carousel {
@@ -158,9 +226,7 @@ nav ul li svg {
   position: relative;
   width: calc((var(--img-width)) * 3);
   font-size: 0px;
-  animation-name: carouselMotion;
-  /*Change animation-duration to larger number to make animations   longer*/
-  animation-duration: 10s;
+  animation: carouselMotion var(--animation-duration);
   animation-iteration-count: infinite;
   overflow: hidden;
 }
@@ -193,5 +259,47 @@ nav ul li svg {
   }
   100% {
     left: 0;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0%;
+  }
+  3% {
+    opacity: 100%;
+  }
+  22% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  30% {
+    opacity: 0%;
+  }
+  33% {
+    opacity: 100%;
+  }
+  52% {
+    opacity: 100%;
+  }
+  55% {
+    opacity: 0%;
+  }
+  58% {
+    opacity: 0%;
+  }
+  60% {
+    opacity: 100%;
+  }
+  82% {
+    opacity: 100%;
+  }
+  85% {
+    opacity: 0%;
+  }
+  97% {
+    opacity: 0%;
   }
 }
