@@ -24,8 +24,8 @@ html {
 .glass {
   background-color: var(--glassBackground);
   backdrop-filter: blur(0.2em);
-  border-top: 1px solid white;
-  border-left: 1px solid white;
+  border-top: 1px solid var(--myTeal);
+  border-left: 1px solid var(--myTeal);
   box-shadow: 5px 5px 5px var(--glassShadow);
 }
 
@@ -243,7 +243,7 @@ nav ul li svg {
 
 .card-section {
   width: 100%;
-  padding: 10%;
+  padding: 10% 10% 5%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -256,7 +256,7 @@ nav ul li svg {
   width: 23%;
   height: 500px;
   transition: all 0.35s ease;
-  margin: 50px 20px;
+  margin: 50px 20px 20px;
   border-radius: 8px;
 }
 
@@ -281,6 +281,31 @@ nav ul li svg {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.form-section form {
+  padding: 25px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.form-section label {
+  margin-bottom: 6px;
+}
+
+.form-section input,
+.form-section textarea {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 /*Animations*/

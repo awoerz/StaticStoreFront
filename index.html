@@ -62,7 +62,7 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li>
             <div class="svg-container">
               <svg
@@ -212,6 +212,20 @@
           <button class="btn">Add To Cart</button>
         </div>
       </div>
+    </div>
+
+    <div class="form-section" id="contact">
+      <form class="glass" action="">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <label for="newsletter">Sign Up For Newsletter:</label>
+        <input type="checkbox" name="newsletter" id="newsletter" />
+        <button class="btn">submit</button>
+      </form>
     </div>
   </body>
 </html>
