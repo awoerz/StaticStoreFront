@@ -11,8 +11,7 @@ html {
 
 :root {
   --myTeal: #00cfc8ad;
-  --myBlue: #4d83f8;
-  --myPurple: #cc65fc44;
+  --myTealOffset: #00cfc844;
   --img-width: 880px;
   --glassBackground: rgba(255, 255, 255, 0.288);
   --glassShadow: rgba(0, 0, 0, 0.3);
@@ -23,7 +22,7 @@ html {
 
 .glass {
   background-color: var(--glassBackground);
-  backdrop-filter: blur(0.2em);
+  backdrop-filter: blur(0.3em);
   border-top: 1px solid var(--myTeal);
   border-left: 1px solid var(--myTeal);
   box-shadow: 5px 5px 5px var(--glassShadow);
@@ -69,6 +68,7 @@ html {
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease;
+  z-index: 1;
 }
 
 .return-top-btn:hover {
@@ -241,6 +241,8 @@ nav ul li svg {
   margin: 0;
 }
 
+/*Card Section*/
+
 .card-section {
   width: 100%;
   padding: 10% 10% 5%;
@@ -283,6 +285,8 @@ nav ul li svg {
   margin-top: 10px;
 }
 
+/*Form Section*/
+
 .form-section {
   display: flex;
   justify-content: center;
@@ -296,6 +300,7 @@ nav ul li svg {
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  border-radius: 8px;
 }
 
 .form-section label {
@@ -309,6 +314,86 @@ nav ul li svg {
   margin-bottom: 10px;
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/*Footer Section*/
+#footer {
+  height: 220px;
+  padding: 20px 80px;
+  background-color: var(--myTealOffset);
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-links h3 {
+  text-decoration: underline;
+}
+
+.social-images-container {
+  display: flex;
+}
+
+.social-images-container a {
+  height: 40px;
+  width: 40px;
+  margin: 0 30px;
+}
+
+.newsletter {
+  display: flex;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter form label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.newsletter form input {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.newsletter button {
+  color: black;
+}
+
+.site-information {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.site-information ul {
+  display: flex;
+  list-style: none;
+}
+
+.site-information ul li {
+  margin: 0 10px;
+}
+
+.site-information ul li a {
+  color: black;
+}
 /*Animations*/
 
 @keyframes carouselMotion {
