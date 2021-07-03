@@ -304,6 +304,7 @@ nav ul li svg {
 
 .form-section input,
 .form-section textarea {
+  padding: 6px;
   font-size: 20px;
   margin-bottom: 10px;
 }
